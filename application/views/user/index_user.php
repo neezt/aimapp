@@ -20,6 +20,7 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>E-mail</th>
+                                <th>Departamento</th>
                             </tr>
                         </thead>
                         <tbody>

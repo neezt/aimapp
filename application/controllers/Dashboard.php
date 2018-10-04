@@ -35,10 +35,10 @@ class Dashboard extends CI_Controller {
 		 }
 		 $data['titulo'] = $this->session->userdata('name');
 		 $data['menu']=0;
-		 $admin['publishers']=$this->members_model->get_members_count(null);
+		 //$admin['publishers']=$this->members_model->get_members_count(null);
 		 $this->load->view('commons/header');
 		 $this->load->view('commons/menu',$data);
-		 $this->load->view('index_admin',$admin);
+		 $this->load->view('dashboard/index');
 		 $this->load->view('commons/footer');
 	}
 

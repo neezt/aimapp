@@ -19,7 +19,15 @@
                     </a>
                     
                 </li>
-               <?php foreach ($this->session->userdata('username') as $key => $value) { ?> class="current_section" <?php } ?>
+               <?php foreach ($this->session->userdata('listMenu') as $menuk) { ?> 
+                    <li <?php if($menu == $menuk->id ) { ?> class="current_section" <?php } ?> title="Dashboard">
+                        <a href="<?php echo base_url().$menuk->url;?>">
+                            <span class="menu_icon"><i class="material-icons"><?= $menuk->icon ?></i></span>
+                            <span class="menu_title"><?= $menuk->name ?></span>
+                        </a>
+                        
+                    </li>
+                <?php } ?>
                 <li title="Salir">
                     <a href="<?php echo base_url();?>dashboard/logout_ci">
                         <span class="menu_icon"><i class="material-icons">&#xE8C6;</i></span>

@@ -24,7 +24,7 @@ class User_model extends CI_Model {
         {
                 $this->db->select('menu.*');
                 $this->db->from('menu');
-                $this->db->join('permission', 'permissions.id_menu=menu.id');       
+                $this->db->join('permission', 'permission.id_menu=menu.id');       
                 $this->db->where('permission.id_user',$id);
                 $query = $this->db->get();
 
@@ -56,12 +56,12 @@ class User_model extends CI_Model {
 
         public function get_users($search,$limit,$start,$col,$dir)
         {
-                $this->db->select(' user.id user_id, user.name ,user.email, user.picture');
+                $this->db->select(' user.id user_id, user.name ,user.email, deparment.name deparment');
                 $this->db->from('user');
-
+                $this->db->join('deparment', 'deparment.id=user.id_deparment');
                 if(!empty($search)){
-                    $this->db->like('users.id',$search)
-                    ->or_like('users.name',$search);
+                    $this->db->like('user.id',$search)
+                    ->or_like('user.name',$search);
                 }
 
                 $query = $this->db->limit($limit,$start)

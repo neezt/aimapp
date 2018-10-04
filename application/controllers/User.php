@@ -30,13 +30,13 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		/*if($this->session->userdata('perfil') == FALSE)
+		if($this->session->userdata('is_logued_in') == FALSE)
 		 {
 		 	redirect(base_url().'inicio/login');
-		 }*/
-		 
+		 }
+		 $data['menu']=2;
 		 $this->load->view('commons/header');
-		 $this->load->view('commons/menu');
+		 $this->load->view('commons/menu',$data);
 		 $this->load->view('user/index_user');
 		 $this->load->view('commons/footer');
 	}
@@ -77,7 +77,7 @@ class User extends CI_Controller {
 		$response["data"] = $resp;
 		$response["draw"] = 1;
 		$response['recordsTotal'] = $this->user_model->get_users_count($search);
-		
+		$response['recordsFiltered'] = $this->user_model->get_users_count($search);
 
 		return $this->output
             ->set_content_type('application/json')

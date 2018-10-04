@@ -177,13 +177,15 @@
     </div>
 
     <!-- common functions -->
+
     <script src="<?php echo base_url();?>assets/js/common.min.js"></script>
 
-    
     <!-- uikit functions -->
     <script src="<?php echo base_url();?>assets/js/uikit_custom.min.js"></script>
     <!-- altair common functions/helpers -->
     <script src="<?php echo base_url();?>assets/js/altair_admin_common.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/custom/uikit_fileinput.min.js"></script>
     <!--  user edit functions -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    
     <script src="<?php echo base_url();?>assets/js/pages/page_user_edit.min.js"></script>
