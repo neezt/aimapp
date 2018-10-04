@@ -40,12 +40,14 @@ class Inicio extends CI_Controller {
 
 		if($resp != null ) {
 			if(password_verify($this->input->post('password'), $resp[0]->password) == true){
+				$menu = $this->user_model->get_menuByUser($resp[0]->id);
 				$data = array(
 	                'is_logued_in' 	=> 		TRUE,
 	                'id_usuario' 	=> 		$resp[0]->id,
-	                'perfil'		=>		$resp[0]->permission_id,
+	                'perfil'		=>		$resp[0]->admin,
 	                'username' 		=> 		$resp[0]->name,
-	                'group_id' 		=> 		$resp[0]->group_id
+	                'department' 		=> 		$resp[0]->id_deparment,
+	                'listMenu' 		=> 		$menu
             		);		
 					$this->session->set_userdata($data);
 				$response = "ok";
