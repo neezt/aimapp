@@ -8,10 +8,12 @@
                     <div class="uk-width-large-7-10">
                         <div class="md-card">
                             <div class="user_heading" data-uk-sticky="{ top: 48, media: 960 }">
+                                <?php if(!empty($user)) { ?>
                                 <input type="hidden" id="codehash" value="<?=$user[0]->code ?>">
+                            <?php } ?>
                                 <div class="user_heading_avatar fileinput fileinput-new" data-provides="fileinput">
                                     <div class="fileinput-new thumbnail">
-                                        <img src="<?php echo base_url();?>assets/img/voluntaries/<?=$user[0]->picture ?>" id="userAvatar" alt="user avatar"/>
+                                        <img src="<?=base_url();?><?php if(!empty($user)) { ?>assets/avatars/user.png <?php } else { ?>  assets/img/voluntaries/<?=$user[0]->picture ?> <?php }?>" id="userAvatar" alt="user avatar"/>
                                     </div>
                                     <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                     <div class="user_avatar_controls">

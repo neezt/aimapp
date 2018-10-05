@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="<?php echo base_url();?>bower_components/uikit/css/uikit.almost-flat.min.css" media="all">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/skins/jquery-ui/material/jquery-ui.min.css">
     <!-- altair admin -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/main.css" media="all">
-
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/jquery.dataTables.css">
     <!-- themes -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/themes/themes_combined.min.css" media="all">
     

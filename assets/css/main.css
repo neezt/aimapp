@@ -9308,7 +9308,9 @@ body.CodeMirror-fullscreen-active .CodeMirror-fullscreen #code_editor_close {
   display: block;
   padding-top: 4px;
 }
-/* datatables */
+
+
+/* datatables 
 .dataTables_wrapper .uk-table {
   margin: 0 auto;
   border-spacing: 0;
@@ -9532,6 +9534,7 @@ body.CodeMirror-fullscreen-active .CodeMirror-fullscreen #code_editor_close {
 .dataTables_wrapper .uk-overflow-container td {
   white-space: nowrap !important;
 }
+*/
 /* plugins */
 .dt_colVis_buttons {
   margin-bottom: 8px;

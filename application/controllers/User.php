@@ -94,6 +94,14 @@ class User extends CI_Controller {
 		 $this->load->view('commons/footer');
 	}
 
+	public function add(){
+		
+		 $this->load->view('commons/header');
+		 $this->load->view('commons/menu');
+		 $this->load->view('user/form_user');
+		 $this->load->view('commons/footer');
+	}
+
 	public function print_card(){
 		
 		$user=$this->user_model->get_user_code($this->input->get('code'));

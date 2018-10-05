@@ -54,7 +54,10 @@ $(document).ready(function() {
     } );
 
     $("#editBtn").click(function (){
-
     	window.location.href = "/user/edit?code="+dataSel.user_id;
+    });
+
+    $("#addBtn").click(function (){
+    	window.location.href = "/user/add?code="+dataSel.user_id;
     });
 } );
